@@ -1,0 +1,44 @@
+{
+  "post": [
+   
+    {
+      "id": 13,
+      "firstName": "",
+      "middleName": "",
+      "lastName": "",
+      "legalFullName": "",
+      "sin": "",
+      "date": "",
+      "email": "",
+      "address1": "",
+      "address2": "",
+      "city": "",
+      "province": "",
+      "zip": "",
+      "country": "",
+      "residency": "",
+      "workingwithbroker": false,
+      "hassolicitor": false,
+      "rent_own": null,
+      "marital_status": "",
+      "number_of_dependants": "",
+      "reason_for_purchase": "",
+      "deciding_factor": "",
+      "comments": "",
+      "project_name": "",
+      "model_name": "",
+      "level": "",
+      "locker_required": "",
+      "bicycle_required": "",
+      "parking_required": "",
+      "phone1": {
+        "number": "2233445667777",
+        "internationalNumber": "+44 2233445667777",
+        "nationalNumber": "2233445667777",
+        "e164Number": "+442233445667777",
+        "countryCode": "GB",
+        "dialCode": "+44"
+      }
+    }
+  ]
+}

@@ -1,0 +1,451 @@
+<div class="main">
+    <div class="container bg-white">
+        <h2 class="text text-center">Worksheet</h2>
+        <div class="text-center mb-5">
+            <h5>
+                Welcome to My Builder. Please submit your worksheet. This worksheet will be used to create Agreement of
+                Purchase and Sale
+            </h5>
+
+
+        </div>
+        <form [formGroup]="formValue">
+            <div class="card border-dark mb-5 ng-star-inserted">
+                <div class="card-body">
+                    <div class="border-bottom">
+                        <div class="row pt-3">
+                            <div class="col-md-4">
+                                <div class="mb-1 form-group">
+                                    <label class="form-label">
+                                        First Name
+                                        <span style="color: red;">*</span>
+                                        :
+                                    </label>
+                                    <input formControlName="firstName" type="text" class="form-control">
+                                </div>
+                                <div class="error "> Fisrt name is required </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-1 form-group">
+                                    <label class="form-label">
+                                        Middle Name:
+                                    </label>
+                                    <input formControlName="middleName" type="text" class="form-control ">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-1 form-group">
+                                    <label class="form-label">
+                                        Last Name
+                                        <span style="color: red;">*</span> :
+                                    </label>
+                                    <input formControlName="lastName" type="text" class="form-control">
+                                </div>
+                                <div class="error ng-star-inserted"> Last name is required </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="mb-1 form-group">
+                                    <label for="legal_full_name" class="form-label"> Full Legal Name <span
+                                            style="color: red;">*</span>
+                                    </label>
+                                    <input formControlName="legalFullName" type="text" id="legal_full_name"
+                                        class="form-control ">
+                                </div>
+                                <div class="error ng-star-inserted"> Full Legal Name is required</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-1 form-group">
+                                    <label for="sin" class="form-label"> SIN #
+                                        <span style="color: red;">*</span> :
+                                    </label>
+                                    <input formControlName="sin" type="text" id="lastName" class="form-control ">
+                                </div>
+                                <div class="error ng-star-inserted"> SIN is required </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="dob" class="form-label"> Date Of Birth
+                                    <span style="color: red;">*
+                                    </span> :
+                                </label>
+                                <div class="mb-1 input-group date" id="datepicker">
+                                    <input formControlName="date" type="date" class="form-control" id="datepicker"
+                                        placeholder="YYYY-MM-DD">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-1 form-group">
+                                    <label for="email" class="form-label">
+                                        Email
+                                        <span style="color: red;">*</span> :
+                                    </label>
+                                    <input formControlName="email" type="email" id="email" class="form-control ">
+                                </div>
+                                <div class="error ng-star-inserted"> Email is required </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-1 form-group">
+                                    <label for="email" class="form-label">
+                                        Email
+                                        <span style="color: red;">*</span> :
+                                    </label>
+                                    <br>
+                                    <ngx-intl-tel-input [cssClass]="' form-control'"
+                                        [preferredCountries]="[CountryISO.UnitedStates, CountryISO.UnitedKingdom]"
+                                        [enableAutoCountrySelect]="false" [enablePlaceholder]="true"
+                                        [searchCountryFlag]="true"
+                                        [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
+                                        [selectFirstCountry]="false" [selectedCountryISO]="CountryISO.India"
+                                        [maxLength]="15" [phoneValidation]="true" [inputId]="'my-input-id'" name="phone"
+                                        formControlName="phone1"></ngx-intl-tel-input>
+                                </div>
+                                <div class="error ng-star-inserted"> Enter valid mobile number </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-1 form-group">
+                                    <label for="email" class="form-label">
+                                        Email
+                                        <span style="color: red;">*</span> :
+                                    </label>
+                                    <br>
+                                    <ngx-intl-tel-input [cssClass]="' form-control'"
+                                        [preferredCountries]="[CountryISO.UnitedStates, CountryISO.UnitedKingdom]"
+                                        [enableAutoCountrySelect]="false" [enablePlaceholder]="true"
+                                        [searchCountryFlag]="true"
+                                        [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
+                                        [selectFirstCountry]="false" [selectedCountryISO]="CountryISO.India"
+                                        [maxLength]="15" [phoneValidation]="true" [inputId]="'my-input-id'" name="phone"
+                                        formControlName="phone2"></ngx-intl-tel-input>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-1 form-group">
+                                    <label for="address1" class="form-label"> Address 1
+                                        <span style="color: red;">*</span> :
+                                    </label>
+                                    <input formControlName="address1" type="text" id="address1" class="form-control ">
+                                </div>
+                                <div class="error ng-star-inserted"> Address 1 is required </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-1 form-group">
+                                    <label for="address2" class="form-label"> Address 2
+                                    </label>
+                                    <input formControlName="address2" type="text" id="address2" class="form-control ">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-1 form-group">
+                                    <label for="email" class="form-label">
+                                        Email
+                                        <span style="color: red;">*</span> :
+                                    </label>
+                                    <br>
+                                    <ngx-intl-tel-input [cssClass]="'form-control'"
+                                        [preferredCountries]="[CountryISO.UnitedStates, CountryISO.UnitedKingdom]"
+                                        [enableAutoCountrySelect]="false" [enablePlaceholder]="true"
+                                        [searchCountryFlag]="true"
+                                        [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
+                                        [selectFirstCountry]="false" [selectedCountryISO]="CountryISO.India"
+                                        [maxLength]="15" [phoneValidation]="true" [inputId]="'my-input-id'" name="phone"
+                                        formControlName="phone3"></ngx-intl-tel-input>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-1 form-group">
+                                    <label for="city" class="form-label"> City
+                                        <span style="color: red;">*</span> :
+                                    </label>
+                                    <input formControlName="city" type="text" id="city" class="form-control ">
+                                </div>
+                                <div class="error "> City is required </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-1 form-group">
+                                    <label for="province" class="form-label"> Province / State
+                                        <span style="color: red;">*</span> :
+                                    </label>
+                                    <input formControlName="province" type="text" id="province" class="form-control ">
+                                </div>
+                                <div class="error ng-star-inserted"> Province is required </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-1 form-group"><label for="zip" class="form-label"> Postal Code / ZIP
+                                    </label>
+                                    <input formControlName="zip" type="text" id="zip" class="form-control ">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-1 form-group">
+                                    <label for="country" class="form-label"> Country
+                                    </label>
+                                    <input formControlName="country" type="text" id="country" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-1 form-group">
+                                    <label for="residency" class="form-label"> Country of Residence
+                                    </label>
+                                    <input formControlName="residency" type="text" id="residency"
+                                        class="form-control ng-pristine ng-valid ng-touched">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="alert alert-primary mt-3">Clear &amp; Valid Government ID
+                                    and your business card must be uploaded in order to receive an allocation.</div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-md-center">
+                            <div class="col-md-6">
+                                <div class="upload-container">
+                                    <button type="button" class="btn btn-primary position-relative">
+                                        Upload id #1
+                                        <input accept="image/*" id="file1" type="file" name="Click here to upload">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="upload-container">
+                                    <button type="button" class="btn btn-primary position-relative">
+                                        Upload id #2 <input accept="image/*" type="file" id="file2"
+                                            name="Click here to upload">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-2">
+                <div class="col-md-12 text-center">
+                    <button class="btn btn-primary btn-lg mt-2"> Add Purchaser
+                    </button>
+                </div>
+            </div>
+            <div class="form-check mt-5">
+                <input type="checkbox" id="workingwithbroker" formControlName="workingwithbroker"
+                    class="form-check-input ">
+                <label for="workingwithbroker" class="form-check-label">
+                    <b>Are you working with a Broker
+                        / Agent?</b>
+                </label>
+            </div>
+            <div class="form-check mt-3">
+                <input type="checkbox" id="workingWithSolicitor" formControlName="hassolicitor"
+                    class="form-check-input ">
+                <label for="workingWithSolicitor" class="form-check-label">
+                    <b>Do you have a
+                        solicitor?
+                    </b>
+                </label>
+            </div>
+            <!-- ----OTHERS----- -->
+            <div formgroupname="others" id="others" class="mt-4 mb-5 ng-untouched ng-pristine ng-invalid">
+                <div class="card border-dark mb-5">
+                    <div class="card-body">
+                        <div class="border-bottom">
+                            <h4>Others</h4>
+                        </div>
+                        <div class="row pt-3">
+                            <div class="col-md-12 mb-2">
+                                <div class="form-check form-check-inline"><input type="radio" formControlName="rent_own"
+                                        id="Invesment" value="Invesment" class="form-check-input "><label
+                                        for="Invesment" class="form-check-label"> Invesment
+                                    </label></div>
+                                <div class="form-check form-check-inline"><input type="radio" formControlName="rent_own"
+                                        id="rent_own" value="Rent" class="form-check-input "><label for="rent_own"
+                                        class="form-check-label"> Rent </label>
+                                </div><!---->
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-1 form-group"><label for="marital_status" class="form-label"> Marital
+                                        Status <span style="color: red;">*</span>
+                                        : </label>
+                                    <input formControlName="marital_status" type="text" id="marital_status"
+                                        class="form-control ">
+                                    <div class="error ng-star-inserted"> Marital status is required </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-1 form-group">
+                                    <label for="number_of_dependants" class="form-label">
+                                        Number of Dependants
+                                        <span style="color: red;">*</span> : </label>
+                                    <input formControlName="number_of_dependants" type="number"
+                                        id="number_of_dependants" class="form-control ">
+                                    <div class="error ng-star-inserted"> Number of Dependants is required </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-1 form-group"><label for="reason_for_purchase" class="form-label"> Reason
+                                        for Purchase
+                                    </label><textarea id="reason_for_purchase" formControlName="reason_for_purchase"
+                                        rows="3" class="form-control "></textarea></div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-1 form-group"><label for="deciding_factor" class="form-label"> Deciding
+                                        Factor </label><textarea id="deciding_factor" formControlName="deciding_factor"
+                                        rows="3" class="form-control "></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-1 form-group">
+                                    <label for="comments" class="form-label"> Comments
+                                    </label>
+                                    <textarea id="comments" formControlName="comments" rows="3" class="form-control ">
+                                    </textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ---------------- -->
+            <!-- -----CHOISE----- -->
+
+            <div class="mt-4 mb-4 ng-star-inserted">
+                <div class="card border-dark mb-4">
+                    <div class="card-body">
+                        <div class="border-bottom">
+                            <h4>Choices</h4>
+                        </div>
+                        <div formarrayname="choices" class="row pt-3 ">
+                            <div class="col-md-12">
+                                <h6>Parking is only available for 2 Beds &amp; Larger only.
+                                    Parking $65,000. Locker $ 7800</h6>
+                            </div>
+                            <div class="col-md-12  ng-star-inserted">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="mb-1 form-group"><label class="form-label" for="project0"> Project
+                                            </label><input type="text" formControlName="project_name"
+                                                class="form-control " id="project0">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mb-1 form-group"><label class="form-label" for="model0"> Model
+                                            </label><input type="text" formControlName="model_name"
+                                                class="form-control " id="model0">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mb-1 form-group"><label class="form-label" for="level0"> Level
+                                            </label>
+                                            <select formControlName="level"
+                                                class="form-control ng-untouched ng-pristine ng-valid">
+                                                <option value=""></option>
+                                                <option value="HIGH" class="ng-star-inserted">HIGH</option>
+                                                <option value="MEDIUM" class="ng-star-inserted">MEDIUM</option>
+                                                <option value="LOW" class="ng-star-inserted">LOW</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12  ng-star-inserted">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="mb-1 form-group"><label class="form-label" for="project1"> Project
+                                            </label><input type="text" formControlName="project_name"
+                                                class="form-control " id="project1">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mb-1 form-group"><label class="form-label" for="model1"> Model
+                                            </label><input type="text" formControlName="model_name"
+                                                class="form-control " id="model1">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mb-1 form-group"><label class="form-label" for="level1"> Level
+                                            </label><select formControlName="level"
+                                                class="form-control ng-untouched ng-pristine ng-valid">
+                                                <option value=""></option>
+                                                <option value="HIGH" class="ng-star-inserted">
+                                                    HIGH </option>
+                                                <option value="MEDIUM" class="ng-star-inserted">
+                                                    MEDIUM </option>
+                                                <option value="LOW" class="ng-star-inserted"> LOW
+                                                </option><!---->
+                                            </select></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12  ng-star-inserted">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="mb-1 form-group"><label class="form-label" for="project2"> Project
+                                            </label><input type="text" formControlName="project_name"
+                                                class="form-control" id="project2">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mb-1 form-group"><label class="form-label" for="model2"> Model
+                                            </label><input type="text" formControlName="model_name"
+                                                class="form-control " id="model2">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mb-1 form-group"><label class="form-label" for="level2"> Level
+                                            </label><select formControlName="level"
+                                                class="form-control ng-untouched ng-pristine ng-valid">
+                                                <option value=""></option>
+                                                <option value="HIGH" class="ng-star-inserted">
+                                                    HIGH </option>
+                                                <option value="MEDIUM" class="ng-star-inserted">
+                                                    MEDIUM </option>
+                                                <option value="LOW" class="ng-star-inserted"> LOW
+                                                </option><!---->
+                                            </select></div>
+                                    </div>
+                                </div>
+                            </div><!---->
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row pt-2">
+                                    <div class="col-md-4">
+                                        <div class="mb-1 form-group"><input formControlName="parking_required"
+                                                type="checkbox" id="parking"><label
+                                                for="parking">&nbsp;&nbsp;&nbsp;Parking
+                                                Required</label></div>
+                                    </div>
+                                    <div class="col-md-4"><input formControlName="locker_required" type="checkbox"
+                                            id="locker"><label for="locker">&nbsp;&nbsp;&nbsp;Locker Required</label>
+                                    </div>
+                                    <div class="col-md-4"><input formControlName="bicycle_required" type="checkbox"
+                                            id="bicycle"><label for="bicycle">&nbsp;&nbsp;&nbsp;Bicycle Required</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ----------------- -->
+            <div class="row pt-2">
+                <div class="col-md-12">
+                    <div class="bottom-block">
+                        <h5>After filling this form, please contact the sales office to submit
+                            your deposit cheques.
+                        </h5>
+                        <button class="btn btn-primary btn-lg mt-2" type="submit"
+                            (click)="postworksheetDetails()">submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
